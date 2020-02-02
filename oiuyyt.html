@@ -1,0 +1,48 @@
+<html>
+<head><title>DATE VALIDATION</title></head>
+<body bgcolor="black">
+<font size="3" color="dark brown" style="Kristen ITC" align="center">
+<form name="f">
+Enter Name  <input type="text" name="N"><br><br>
+Enter address  <input type="text"><br><br>
+Select Gender  
+<select name="gender">
+<option value="1" name="ga">gender</option>
+<option value="2" name="ma">male</option>
+<option value="3" name="fa">female</option></select><br><br>
+Enter Birthdate  <input type="text" name="a"><br><br>
+Enter Password  <input type="password" name="p"><br><br>
+ReEnter Password  <input type="password" name="r">
+
+<br>
+<br>
+<input type="button" value="submit" onClick="birh();">
+<input type="button" value="reset">
+</form></font>
+<script language="javascript">
+function birh()
+{
+var s, b, c, w, d,x, y,N
+
+d=document.f.a.value
+s=d.split("/",3)
+b=s[0]
+c=s[1]
+w=s[2]
+if (b>31 || b<1)
+     alert("invalid date")
+else if (c>12 || c<1)
+     alert("invalid month")
+else if (w>2018 || w<1)
+     alert("invalid year")
+else
+     alert("VALID BITTH DATE")
+
+x=document.f.p.value
+y=document.f.r.value
+if (x==y)
+    alert("correct password")
+else if (x<y || y<x)
+   alert("incorrect password") 
+}
+</script></body></html>
